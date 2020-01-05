@@ -1,0 +1,118 @@
+.container {
+    width: 90%;
+    margin: 0.5em auto 0.5em;
+}
+
+div, li, dd, dt, td, select, textarea, input {
+    font-family: 'NanumGothic', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+ul, ol, dl, li, dd, dt, p, form, div {
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+}
+
+hr {
+    display: visible;
+}
+
+.img-wrapper {
+    line-height: 0;
+    display: block;
+    width: 100%;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    border: 0.5px lightgray solid;
+    margin: 1.5em auto 0 auto;
+}
+
+.img-wrapper > img {
+    width: 668.7px;
+}
+
+img + img {
+    margin-top: 0.5em;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid lightgray;
+}
+
+th, td {
+    border: 1px solid lightgray;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(229, 229, 229);
+}
+
+td {
+    padding-left: 0.9em; 
+}
+
+th.p27 {
+    background-color: rgb(229, 229, 229);
+    width: 27%
+}
+
+th.light-head {
+    background-color: lightgreen;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+th strong {
+    text-decoration: underline;
+}
+
+.tip-header::before {
+    content: '';
+    display: inline-block;
+    vertical-align: sub;
+    background-image: url("https://material.io/tools/icons/static/icons/baseline-info-24px.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    height: 20px;
+    width: 23px;
+}
+
+.tip-header {
+    display: block;
+    color: white;
+    padding: 0.6em 1em;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    background: #0095e9;
+}
+
+.tip {
+    display: block;
+    font-size: 15px;
+    padding: 0.6em 1em;
+    margin-top: 0;
+    box-sizing: border-box;
+    background: #9bdfff;
+}
+
+.tip > p:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+kbd {
+    font-family: unset;
+}
+
+samp {
+    font-family: unset;
+    font-weight: bold;
+}

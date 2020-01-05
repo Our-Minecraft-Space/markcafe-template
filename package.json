@@ -1,0 +1,34 @@
+{
+  "name": "markcafe-template",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "Template repository for writing articles on Naver Cafe with Markdown.",
+  "keywords": [
+    "naver",
+    "cafe",
+    "markdown"
+  ],
+  "homepage": "https://github.com/finalchild/markcafe-template#readme",
+  "bugs": {
+    "url": "https://github.com/finalchild/markcafe-template/issues"
+  },
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Final Child",
+    "email": "finalchild2@gmail.com",
+    "url": "https://finalchild.me/"
+  },
+  "main": "markcafe.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finalchild/markcafe-template.git"
+  },
+  "scripts": {
+    "generate": "node markcafe.mjs"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "juice": "^6.0.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-container": "^2.0.0"
+  }
+}

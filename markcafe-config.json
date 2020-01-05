@@ -1,0 +1,14 @@
+{
+    "articlesDirectoryPath": "./articles",
+    "imagesDirectoryPath": "./images",
+    "cssPath": "./style.css",
+    "generatedDirectoryPath": "./generated",
+    "cname": "",
+    "markdownItOptions": {
+        "html": true,
+        "breaks": true,
+        "typographer": true
+    },
+    "imgSrcPrefix": "https://<page root url>/",
+    "tipHeaderContent": "팁"
+}
