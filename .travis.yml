@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - node
 cache: npm
-script: npm run generate
+script: npm run-script generate
 deploy:
   provider: pages
   skip-cleanup: true
