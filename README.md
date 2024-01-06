@@ -8,10 +8,7 @@
 ## 기본 설정
 1. 이 저장소에서 <kbd><samp>Use this template</samp></kbd> 버튼을 누릅니다.
 2. `markcafe-config.json`에서 `imgSrcPrefix`를 `"https://<페이지 루트 URL>/"`로 설정합니다.<br>예) `https://finalchild.github.io/my-tutorial/`
-3. (트라비스 CI를 사용한 적이 없다면) [트라비스 CI](https://travis-ci.com/)에 접속하여, 깃허브로 로그인하여 계정을 활성화합니다.
-4. [깃허브 도움말](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)을 참고하여 깃허브 계정의 개인 접근 토큰을 생성합니다. 공개 저장소의 경우에는 `public_repo`, 비공개 저장소의 경우에는 `repo` 권한이 필요합니다.
-5. 트라비스 CI의 저장소 설정 페이지에서 `GITHUB_TOKEN` 환경 변수의 값을 생성한 개인 접근 토큰으로 설정합니다.
-6. (와이드 스킨 카페의 경우) `style.css`에서 `.container`의 `width`를 `100%`로 설정합니다.
+3. 저장소 설정 페이지에서 `Pages`의 `Source`를 `GitHub Actions`로 설정합니다.
 
 ## 사용
 ### `markcafe-config.json`
@@ -20,7 +17,6 @@
 * `imagesDirectoryPath`: 사용되는 이미지가 들어 있는 디렉터리의 경로를 지정합니다.
 * `cssPath`: CSS 파일의 경로를 지정합니다.
 * `generatedDirectoryPath`: 변환 목적지 디렉터리의 경로를 지정합니다.
-* `cname`: 깃허브 페이지에 사용자 지정 도메인을 사용할 때, `CNAME` 파일에 들어갈 내용을 지정합니다. 비어 있으면 `CNAME` 파일을 생성하지 않습니다.
 * `markdownItOptions`: [Markdown-It](https://markdown-it.github.io/)에 전달되는 설정 객체입니다.
 * `imgSrcPrefix`: `![]()` 구문으로 이미지를 삽입할 때, 경로가 문자열 `images/`로 시작하면 그 앞에 설정된 문자열을 더합니다. 이미지를 절대 경로로 바꾸어 네이버 카페에 HTML을 바로 붙여넣을 수 있게 하는 용도입니다.
 * `tipHeaderContent`: 아래에서 설명하는 팁 구문을 사용할 때, 팁의 헤더에 삽입되는 HTML을 설정합니다.
@@ -56,7 +52,7 @@
 `npm run-script generate` 명령어를 실행합니다. 변환된 파일은 `generated` 디렉터리에 저장됩니다.
 
 ### CI
-트라비스 CI가 활성화되어 있으면 커밋이 푸시될 때 빌드 후 깃허브 페이지에 `generated` 디렉터리를 자동으로 업로드합니다. 깃허브 페이지가 `gh-pages` 브랜치를 사용하도록 설정해 주세요.
+깃허브 액션스가 활성화되어 있으면 커밋이 푸시될 때 빌드 후 깃허브 페이지에 `generated` 디렉터리를 자동으로 업로드합니다. 페이지가 깃허브 엑션스를 사용하도록 설정해 주세요.
 
 ### 실행 결과
 `generated` 디렉터리의 `<파일명>.html`에 미리보기 페이지가, `<파일명>.html.txt`에 네이버 카페에 붙여넣을 수 있는 HTML이 저장됩니다.

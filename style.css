@@ -1,5 +1,5 @@
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0.5em auto 0.5em;
 }
 
@@ -54,7 +54,7 @@ th {
 }
 
 td {
-    padding-left: 0.9em; 
+    padding-left: 0.9em;
 }
 
 th.p27 {

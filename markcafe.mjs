@@ -65,9 +65,6 @@ async function main() {
 
     const promises = [];
     promises.push(fse.copy(config.imagesDirectoryPath, path.join(config.generatedDirectoryPath, 'images')));
-    if (typeof config.cname === 'string' && config.cname !== '') {
-        promises.push(fs.writeFile(path.join(config.generatedDirectoryPath, 'CNAME'), config.cname + '\n'));
-    }
     promises.push((async () => {
         const css = await fs.readFile(config.cssPath, 'utf8');
 
