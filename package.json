@@ -6,9 +6,9 @@
     "generate": "node markcafe.mjs"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0",
-    "juice": "^6.0.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-container": "^2.0.0"
+    "fs-extra": "^11.2.0",
+    "juice": "^10.0.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-container": "^4.0.0"
   }
 }

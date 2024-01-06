@@ -3,7 +3,7 @@
 
 이 템플릿을 이용하면 articles 디렉터리에 마크다운 문서를 작성해 업로드했을 때 자동으로 HTML 문서가 깃허브 페이지에 업로드되도록 할 수 있습니다.
 
-별도의 저장소 없이 간단하게 마크다운 문서를 HTML로 변환하고 싶다면 [마크카페 웹](https://markcafe.finalchild.me)을 이용해 주세요.
+별도의 저장소 없이 간단하게 마크다운 문서를 HTML로 변환하고 싶다면 [마크카페 웹](https://markcafe.finalchild.dev)을 이용해 주세요.
 
 ## 기본 설정
 1. 이 저장소에서 <kbd><samp>Use this template</samp></kbd> 버튼을 누릅니다.
@@ -66,13 +66,13 @@
 ## 네이버 카페에 HTML 업로드
 브라우저에 [탬퍼멍키](https://www.tampermonkey.net/) 확장을 설치하고, [우리의 카페테리아](https://openuserjs.org/scripts/finalchild/Our_Cafeteria) 스크립트를 설치하면 게시글 작성 창에 아래와 같이 HTML 편집 버튼이 나타납니다.
 
-![우리의 카페테리아 스크린숏](https://i.imgur.com/yauzGbb.png)
+![우리의 카페테리아 스크린샷](https://i.imgur.com/yauzGbb.png)
 
 `<파일명>.html.txt`의 내용을 복사하여 HTML 편집기에 붙여 넣으면 됩니다.
 
 ## 예시
 ### 우리들의 마인크래프트 공간 초심자 가이드
-* [깃허브 저장소](https://github.com/finalchild/our-mc-tutorial)
+* [깃허브 저장소](https://github.com/Our-Minecraft-Space/our-mc-tutorial)
 * [네이버 카페 게시글](https://cafe.naver.com/minecraftgame/1677174)
 
 ## 라이선스

@@ -1,11 +1,12 @@
 import MarkdownIt from 'markdown-it';
 import containerPlugin from 'markdown-it-container';
-import fs from 'fs-extra';
-import path from 'path';
+import fs from 'node:fs/promises';
+import fse from 'fs-extra/esm';
+import path from 'node:path';
 import juice from 'juice';
 
 const template1Start = `<div class="container">`;
-const template1End = `</div>`
+const template1End = `</div>`;
 
 const template2Start = `<!DOCTYPE html>
 <html>
@@ -32,7 +33,7 @@ const template2End = `
 main();
 
 async function main() {
-    const config = await fs.readJson('./markcafe-config.json', 'utf8');
+    const config = await fse.readJson('./markcafe-config.json', 'utf8');
     if (config.generatedDirectoryPath.endsWith('/')) config.generatedDirectoryPath = config.generatedDirectoryPath.slice(0, str.length - 1);
     if (!config.imgSrcPrefix.endsWith('/')) config.imgSrcPrefix += '/';
     const md = new MarkdownIt(config.markdownItOptions).use(containerPlugin, 'tip', {
@@ -60,15 +61,16 @@ async function main() {
         return result;
     };
 
-    await fs.emptyDir(config.generatedDirectoryPath);
+    await fse.emptyDir(config.generatedDirectoryPath);
 
     const promises = [];
-    promises.push(fs.copy(config.imagesDirectoryPath, path.join(config.generatedDirectoryPath, 'images')));
+    promises.push(fse.copy(config.imagesDirectoryPath, path.join(config.generatedDirectoryPath, 'images')));
     if (typeof config.cname === 'string' && config.cname !== '') {
         promises.push(fs.writeFile(path.join(config.generatedDirectoryPath, 'CNAME'), config.cname + '\n'));
     }
     promises.push((async () => {
         const css = await fs.readFile(config.cssPath, 'utf8');
+
         const filenames = await fs.readdir(config.articlesDirectoryPath);
         await Promise.all(filenames.map(async filename => {
             const baseName = filename.replace(/\.[^/.]+$/, '');
@@ -88,12 +90,12 @@ async function convertFile(md, css, srcPath, targetTxtPath, targetHtmlPath) {
         preserveImportant: false,
         preserveMediaQueries: false,
         preserveKeyFrames: false,
-        preservePseudos: false
+        preservePseudos: false,
     });
     const templated2 = template2Start + juiced + template2End;
-    
+
     await Promise.all([
         fs.writeFile(targetTxtPath, juiced),
-        fs.writeFile(targetHtmlPath, templated2)
+        fs.writeFile(targetHtmlPath, templated2),
     ]);
 }
