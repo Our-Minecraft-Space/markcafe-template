@@ -8,7 +8,7 @@
   "dependencies": {
     "fs-extra": "^11.2.0",
     "juice": "^10.0.0",
-    "markdown-it": "^14.0.0",
+    "markdown-it": "^14.1.1",
     "markdown-it-container": "^4.0.0"
   }
 }
